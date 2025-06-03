@@ -55,12 +55,12 @@ function getPieceSquareValue(piece, squareName, currentGame) {
     return (piece.color === 'w') ? table[rank][file] : -table[7 - rank][file];
 }
 
-const AI_SEARCH_DEPTH = 3; // Increased from 2
-const AI_ENDGAME_SEARCH_DEPTH = 4; // Increased from 3
-const ENDGAME_NON_PAWN_KING_PIECE_THRESHOLD = 5;
+const AI_SEARCH_DEPTH = 2; // Increased from 2
+const AI_ENDGAME_SEARCH_DEPTH = 3; // Increased from 3
+const ENDGAME_NON_PAWN_KING_PIECE_THRESHOLD = 4;
 const MATE_SCORE = 1000000;
 const ABSOLUTE_INFINITY = MATE_SCORE * 10;
-const QUIESCENCE_MAX_DEPTH = 2; // Quiescence depth for tactical stability
+const QUIESCENCE_MAX_DEPTH = 3; // Quiescence depth for tactical stability
 
 // --- Global variables for draw/concession states ---
 let gameEndedManually = false;
